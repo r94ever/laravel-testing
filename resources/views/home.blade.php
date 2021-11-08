@@ -41,7 +41,7 @@
                             <td>{{ $post->category }}</td>
                             <td>{{ $post->comments_count }}</td>
                             <td>
-                                <a href="{{ route('export', ['target' => $post->id]) }}">export PDF</a>
+                                <a href="{{ route('export', ['crawledPost' => $post->id]) }}">export PDF</a>
                             </td>
                         </tr>
                     @endforeach

@@ -15,9 +15,9 @@ class CreateCrawledPostsTable extends Migration
     {
         Schema::create('crawled_posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('post_id');
+            $table->string('post_url');
             $table->string('title');
-            $table->string('category')->nullable();
+            $table->string('category');
             $table->integer('comments_count')->default(0);
             $table->timestamp('crawled_at');
         });
